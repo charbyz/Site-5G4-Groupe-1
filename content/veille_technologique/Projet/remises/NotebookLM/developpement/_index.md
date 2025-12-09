@@ -15,10 +15,10 @@ une vidéo qui va expliquer nos notes de cours comme si c'était un podcast.
 
  ![alt text](try.png)
 
- ensuite on clique sur "Create a new notebook" et vous pourrez ajouter les sources que vous voulez. 
- dans cet exemple on va créer une feuille aide-mémoir pour un examen de soutien technique.
- on clique sur "Upload a source" et ensuite on selectionne les fichiers que l'on veut utiliser.
- Après avoir ajouter vos documents on va cliquer sur "Audio Overview"
+ Ensuite on clique sur "Create a new notebook" et vous pourrez ajouter les sources que vous voulez. 
+ Dans cet exemple, on va créer une feuille aide-mémoire pour un examen de soutien technique.
+ On clique sur "Upload a source" et ensuite on sélectionne les fichiers que l'on veut utiliser.
+ Après avoir ajouté vos documents, on va cliquer sur "Audio Overview".
 
  ![alt text](create.png)
 
@@ -50,25 +50,26 @@ L’IA doit apprendre à créer ses propres catégories en détectant des simila
 
 ### 3.3 Apprentissage auto-supervisé
 
-L’apprentissage auto-supervisé une forme d'apprentissage non supervisé :
-il n'a pas besoin de données étiquetées par des humains, le modèle va créer ses propre "étiquettes" a partir des milliers de données qu'on lui donne. Par exemple on lui donne une phrase simple comme "je veux un verre de ____"  il devra apprendre a prédire le bon mot manquant. Donc on lui donne des données brutes qu'il devra completer avec ses propres étiquettes. Cependant, si on veut que notre IA soit plus précis(pour une niche spécifique) au niveau de sa reconnaissance on va ajouter une étape a l'entrainement: le fine-tuning. Le fine-tuning consiste a passer en mode supervision pour que notre IA soit meilleur pour notre niche.
+L’apprentissage auto-supervisé est une forme d'apprentissage non supervisé :
+Il n'a pas besoin de données étiquetées par des humains, le modèle va créer ses propres "étiquettes" à partir des milliers de données qu'on lui donne. Par exemple, on lui donne une phrase simple comme "je veux un verre de ____" :  il devra apprendre à prédire le bon mot manquant. Donc on lui donne des données brutes qu'il devra compléter avec ses propres étiquettes. Cependant, si on veut que notre IA soit plus précise (pour une niche spécifique) au niveau de sa reconnaissance, on va ajouter une étape à l'entrainement: le fine-tuning. Le fine-tuning consiste à passer en mode supervision pour que notre IA soit meilleure pour notre niche.
 
 L’apprentissage auto-supervisé est un entre-deux :
-on fournit des données sans labels humains, mais l’IA génère elle-même les “réponses attendues” à partir du contenu.
+On fournit des données sans labels humains, mais l’IA génère elle-même les “réponses attendues” à partir du contenu.
 
 Exemple :
 
-“pikachu est un pokemon de type ___.”
-L’IA doit deviner electrique.
+“Pikachu est un Pokémon de type___.”
+L’IA doit deviner électrique.
 
-Dans ce cas, si on veut que notre IA puisse identifier le type de chaque pokemon avec une image on devra  passer en mode supervision pour qu'il comprenne bien la différence entre chaque pokémon.
+Dans ce cas, si on veut que notre IA puisse identifier le type de chaque Pokémon avec une image, on devra passer en mode supervision pour qu'elle comprenne bien la différence entre chaque Pokémon.
 Elle s’entraîne toute seule en se testant et en corrigeant ses erreurs.
+
 
  ![alt text](difference.png)
 
 
 ### 3.4 l'apprentisage automatique
-L’apprentissage auto-supervisé (self-supervised learning, SSL) est basé sur l’apprentissage automatique. L’apprentissage automatique est un champ d’étude de l’intelligence artificielle : il permet aux ordinateurs d’analyser de grandes quantités de données pour y repérer des motifs ou des tendances complexes. Grâce à ce processus, l’IA peut faire des prédictions ou des classifications sur de nouvelles données. Cela permet d’automatiser des tâches complexes sans avoir à programmer manuellement l’IA pour chaque règle ou situation. De nos jours, l'apprentissage automatique est utilisé dans plusieurs domaines, par exemple: pour de la publicité, pour prédire la fluctuations des marchés boursiers ou encore pour la traduction de langue. Souvent, l'apprentissage automatique et l'intelligence artificielle vont être confondu, mais il faut comprendre que l'IA représente l'ensemble des approches qui visent a donner des capacités intellectuelles proche de celle des humains a des machines alors que l'apprentissage automatique est plus précis. C'est l'usage d'algorithmes et de données pour permettre aux machines de s'améliorer et exécuter des tâches sans êtres programmés pour ces taches précisemments.
+L’apprentissage auto-supervisé (self-supervised learning, SSL) est basé sur l’apprentissage automatique. L’apprentissage automatique est un champ d’étude de l’intelligence artificielle : il permet aux ordinateurs d’analyser de grandes quantités de données pour y repérer des motifs ou des tendances complexes. Grâce à ce processus, l’IA peut faire des prédictions ou des classifications sur de nouvelles données. Cela permet d’automatiser des tâches complexes sans avoir à programmer manuellement l’IA pour chaque règle ou situation. De nos jours, l'apprentissage automatique est utilisé dans plusieurs domaines, par exemple: pour de la publicité, pour prédire la fluctuation des marchés boursiers ou encore pour la traduction de langues. Souvent, l'apprentissage automatique et l'intelligence artificielle vont être confondus, mais il faut comprendre que l'IA représente l'ensemble des approches qui visent à donner des capacités intellectuelles proches de celles des humains à des machines, alors que l'apprentissage automatique est plus précis. C'est l'usage d'algorithmes et de données pour permettre aux machines de s'améliorer et d'exécuter des tâches sans qu'elles soient programmées pour ces tâches précisément.
 
  ![alt text](schema.png)
 
@@ -79,7 +80,7 @@ L’apprentissage auto-supervisé (self-supervised learning, SSL) est basé sur 
 Le source-grounding est un principe qui consiste à ancrer les réponses d’un modèle de langage dans des sources externes fiables plutôt que de se fier uniquement
 à ses données d’entraînement.
 
-Lorsque l’utilisateur pose une question, le système fournit au LLM des informations provenant de sources contrôlées (documents, bases de données, API, graphes de connaissance),
+Lorsque l’utilisateur pose une question, le système fournit au LLM des informations provenant de sources contrôlées (documents, bases de données, API, graphes de connaissances),
 afin de réduire les hallucinations et d’améliorer la précision des réponses.
 
 Le source-grounding ne dépend pas d’une technologie unique : les informations peuvent
@@ -87,22 +88,22 @@ Le source-grounding ne dépend pas d’une technologie unique : les informations
 
 ### 4.1 La séléction de données
 
-Les systèmes d'IA groundée vont exploiter des informations provenant de plusieurs sources différentes chacune avec ses propres caractéristiques:
+Les systèmes d'IA groundée vont exploiter des informations provenant de plusieurs sources différentes, chacune avec ses propres caractéristiques:
 
- - sources internes : des documents et bases de données propre à l'entreprise(contrats, politique, wikis)
+- Internes : des documents et bases de données propres à l'entreprise (contrats, politique, wikis).
 
- - source externes : des sites web public et des services de données à jour.
+- Sources  externes : des sites web publics et des services de données à jour.
 
- - données structurées : bases de données SQL, graphes de connaissance et point d'accès API offrant des informations précise et factuelles.
+-  Données structurées : bases de données SQL, graphes de connaissances et point d'accès API offrant des informations précises et factuelles.
 
- - contenue non structuré : documents, courriels et pages web nécessitant un traitement sémantique pour extraire les passages pertinents. 
+-  Contenue non structuré : documents, courriels et pages web nécessitant un traitement sémantique pour extraire les passages pertinents. 
 
 
- Pour gérer les contenues non structuré, elles vont être "filtré" par `indexation vectorielle` 
+ Pour gérer les données non structurées, elles vont être "filtrées" par `indexation vectorielle` 
 
- ```txt
+ ```txt
 L’indexation vectorielle, c’est quand la machine transforme le texte en valeurs numériques afin de
- représenter son sens, un peu comme un traducteur de langage pour les ordinateurs. 
+ représenter son sens, un peu comme un traducteur de langage pour les ordinateurs. 
 
 ```
 
@@ -120,7 +121,7 @@ pour récupérer dynamiquement les passages les plus pertinents au moment de la 
 ### 4.3 Fonctionnement du Rag
 Dans un système RAG, la requête de l’utilisateur est transformée en vecteur sémantique.
 Le système compare ce vecteur à ceux des documents stockés dans une base
-de données vectorielle afin d’identifier les passages les plus pertinents.
+de données vectorielles afin d’identifier les passages les plus pertinents.
 Ces informations sont ensuite injectées dans le prompt du LLM pour générer la réponse.
 
 
@@ -128,14 +129,11 @@ Ces informations sont ensuite injectées dans le prompt du LLM pour générer la
 
 L'approche RAG présente plusieurs avantages:
 
--  Les LLM fournissent des réponses précises et à jour: vu que les LLM utilisant RAG utilisent des sources externes et pas seulement ces données d'entrainements, il pourra fournir des réponses claires et à jour.
+- Les LLM fournissent des réponses précises et à jour: vu que les LLM utilisant RAG utilisent des sources externes et pas seulement ces données d'entrainement, il pourra fournir des réponses claires et à jour.
 
-- moins de chance de donner de fausses informations ou encore des informations imprécises : En se basant sur les données externes pertinentes, la RAG va réduire le risque de produire des informations fabriqués ou faussées.
+- Moins de chances de donner de fausses informations ou encore des informations imprécises : en se basant sur les données externes pertinentes, la RAG va réduire le risque de produire des informations fabriquées ou faussées.
 
-- Déployer la RAG est rentable : Déployer la RAG ne nécessite pas de personnalisation de modèle. Cela sauve énormément de temps, car les compagnies n'ont pas a ré-entrainer leur machines a chaque fois qu'il y a de nouvelles données.
-
-
-
+- Déployer la RAG est rentable : déployer la RAG ne nécessite pas de personnalisation de modèle. Cela sauve énormément de temps, car les compagnies n'ont pas a réentrainer leurs machines à chaque fois qu'il y a de nouvelles données.
 
 
 
