@@ -76,12 +76,15 @@ L’apprentissage auto-supervisé (self-supervised learning, SSL) est basé sur 
 
 ### 4. Le source-grounding
  
- Le grounding est un processus qui commence le moment que la requête de l'utilisateur entre dans le système. Le LLM va transformer cette rêquete en vecteur sémantique qui va capturer son sens. Par la suite, le système va capturer le ou les passages les plus important et pertinents à partir de documents, de base de donnée ou de graphe de connaissance puis au final il les combienera avec la requête initial. 
+Le source-grounding est un principe qui consiste à ancrer les réponses d’un modèlede langage dans des sources externes fiables plutôt que de se fier uniquement
+à ses données d’entraînement.
 
- Le grounding va combler le manque de contexte que les LLM ne possèdent pas uniquement a partir de leur entraînement.
+Lorsque l’utilisateur pose une question, le système fournit au LLM des informations provenant de sources contrôlées (documents, bases de données, API, graphes de connaissance),
+afin de réduire les hallucinations et d’améliorer la précision des réponses.
 
 
-### La séléction de données
+
+### 4.1 La séléction de données
 
 Les systèmes d'IA groundée vont exploiter des informations provenant de plusieurs sources différentes chacune avec ses propres caractéristiques:
 
@@ -104,14 +107,21 @@ L’indexation vectorielle, c’est quand la machine transforme le texte en vale
 
 
 
-### 4.1 Retrieval-Augmented Generation(RAG)
+### 4.2 Retrieval-Augmented Generation(RAG)
 
-Le RAG(génération à enrichissement contextuel) est une technique qui va permettre l'optimisation de réponses de modèle de langage en intelligence artificielle générative. Cette technique va permettre d'améliorer la qualité des réponses des LLM en exploitant des ressources sans avoir à se re-entrainer. Les chatbots qui utilisent RAG vont être plus précis que ceux qui ne l'utilisent pas. Par contre, la mise en oeuvre de la RAG demande des technologies telles que des bases de données vectorielles qui va coder des nouvelles données rapidement. Ces technologies sont nécessaires parce que les chatbots qui utilisent RAG vont seulement se fier à l'information à laquelle elle a accès donc si les informations ne sont plus récentes l'IA transmettre des informations qui ne sont plus valables.
+Le Retrieval-Augmented Generation (RAG) est une implémentation spécifique du
+source-grounding. Il combine une étape de recherche automatique d’information
+(retrieval) et une étape de génération de texte par un modèle de langage.
 
- ```txt
-NotebookLM n’entraîne pas de nouveau modèle : il utilise un LLM existant et améliore ses réponses
-grâce au source-grounding et au RAG, en s’appuyant uniquement sur les documents fournis par l’utilisateur.
-```
+Contrairement au source-grounding général, le RAG utilise une recherche vectorielle
+pour récupérer dynamiquement les passages les plus pertinents au moment de la requête.
+
+### 4.3 Fonctionnement du Rag
+La requête de l’utilisateur est transformée en vecteur sémantique.
+Le système compare ce vecteur à ceux des documents stockés dans une base
+de données vectorielle afin d’identifier les passages les plus pertinents.
+Ces informations sont ensuite injectées dans le prompt du LLM pour générer la réponse.
+
 
 ### 5. Les avantages
 
